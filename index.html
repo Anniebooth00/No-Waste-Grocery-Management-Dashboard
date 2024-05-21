@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Management Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/uikit@3.7.2/dist/css/uikit.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="uk-container">
+    <h1 class="uk-heading-medium uk-text-center">Grocery Management Dashboard</h1>
+    <div class="dashboard">
+        <!-- Upload Receipt -->
+        <div class="card">
+            <div class="card-header">Upload Receipt</div>
+            <div class="card-body">
+                <button class="uk-button uk-button-default">Upload Receipt</button>
+            </div>
+        </div>
+
+        <!-- Grocery Items List -->
+        <div class="card">
+            <div class="card-header">Grocery Items</div>
+            <div class="card-body">
+                <ul class="uk-list uk-list-divider">
+                    <li>Milk - Expires in 3 days</li>
+                    <li>Bread - Expires in 5 days</li>
+                    <li>Eggs - Expires in 7 days</li>
+                    <!-- Add more items as needed -->
+                </ul>
+            </div>
+        </div>
+
+        <!-- Recipes -->
+        <div class="card">
+            <div class="card-header">Recipes</div>
+            <div class="card-body">
+                <ul class="uk-list uk-list-bullet">
+                    <li>Recipe 1: Ingredients A, B, C</li>
+                    <li>Recipe 2: Ingredients D, E, F</li>
+                    <li>Recipe 3: Ingredients G, H, I</li>
+                    <!-- Add more recipes as needed -->
+                </ul>
+            </div>
+        </div>
+
+        <!-- Add Items Manually -->
+        <div class="card">
+            <div class="card-header">Add Items</div>
+            <div class="card-body">
+                <form>
+                    <div class="uk-margin">
+                        <input class="uk-input" type="text" placeholder="Item Name">
+                    </div>
+                    <div class="uk-margin">
+                        <input class="uk-input" type="text" placeholder="Quantity">
+                    </div>
+                    <div class="uk-margin">
+                        <input class="uk-input" type="date" placeholder="Expiration Date">
+                    </div>
+                    <button class="uk-button uk-button-primary" type="submit">Add Item</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.7.2/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.7.2/dist/js/uikit-icons.min.js"></script>
+</body>
+</html>
+
