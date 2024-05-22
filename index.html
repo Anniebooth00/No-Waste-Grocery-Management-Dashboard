@@ -1,75 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grocery Management Dashboard</title>
-    <link href="https://cdn.jsdelivr.net/npm/uikit@3.7.2/dist/css/uikit.min.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <!-- Importing UIKit CSS framework for styling -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.22/dist/css/uikit.min.css">
+    <!-- Importing global CSS styles -->
+    <link rel="stylesheet" href="./assets/css/globals.css">
+    <!-- Importing style guide CSS styles -->
+    <link rel="stylesheet" href="./assets/css/styleguide.css">
+    <!-- Importing custom CSS styles -->
     <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- Setting the title of the page -->
+    <title>NoWaste</title>
 </head>
 <body>
-
-<div class="uk-container">
-    <h1 class="uk-heading-medium uk-text-center">Grocery Management Dashboard</h1>
-    <div class="dashboard">
-        <!-- Upload Receipt -->
-        <div class="card">
-            <div class="card-header">Upload Receipt</div>
-            <div class="card-body">
-                <button class="uk-button uk-button-default">Upload Receipt</button>
+    <!-- Main container for the app, with UIKit container class -->
+    <div class="iphone uk-container">
+        <!-- Header section containing the navigation bar -->
+        <header class="group uk-navbar-container">
+            <!-- Navigation bar with UIKit navbar class -->
+            <nav class="overlap-group uk-navbar">
+                <!-- Left section of the navbar, aligned vertically in the center -->
+                <div class="uk-navbar-left uk-flex uk-flex-middle">
+                    <!-- Image for the viewfinder circle icon -->
+                    <img class="heroicons-solid" src="./assets/img/viewfinder-circle.png" alt="Viewfinder Circle" />
+                </div>
+                <!-- Center section of the navbar for the title -->
+                <div class="uk-navbar-center">
+                    <!-- Link element styled as the logo -->
+                    <a href="#" class="uk-navbar-item uk-logo">NoWaste</a>
+                </div>
+                <!-- Right section of the navbar, aligned vertically in the center -->
+                <div class="uk-navbar-right uk-flex uk-flex-middle">
+                    <!-- Image for the settings icon -->
+                    <img class="heroicons-solid-cog" src="./assets/img/settings-icon.png" alt="Settings Icon" />
+                </div>
+            </nav>
+        </header>
+        <!-- Main content section -->
+        <main>
+            <!-- First frame section, centered and middle-aligned using UIKit flex utilities -->
+            <section class="frame uk-flex uk-flex-center uk-flex-middle">
+                <!-- Figure element for the apple icon, with border and circular shape -->
+                <figure class="apple-wrapper uk-border-circle uk-border">
+                    <!-- Image for the apple icon -->
+                    <img class="apple" src="./assets/img/apple-icon.png" alt="Apple Icon" />
+                </figure>
+                <!-- Text wrapper for item name -->
+                <div class="text-wrapper">Item()</div>
+                <!-- Text wrapper for expiration date -->
+                <div class="text-wrapper">Ex Date</div>
+                <!-- Button for editing, styled with UIKit button classes -->
+                <button class="controls-buttons uk-button uk-button-default">
+                    <span class="text">Edit</span>
+                </button>
+            </section>
+            <!-- Second frame section, similar to the first frame -->
+            <section class="frame-2 uk-flex uk-flex-center uk-flex-middle">
+                <figure class="apple-wrapper uk-border-circle uk-border">
+                    <img class="apple" src="./assets/img/apple-icon.png" alt="Apple Icon" />
+                </figure>
+                <div class="text-wrapper">Item()</div>
+                <div class="text-wrapper">Ex Date</div>
+                <button class="controls-buttons uk-button uk-button-default">
+                    <span class="text">Edit</span>
+                </button>
+            </section>
+            <!-- Text for inventory section -->
+            <div class="text-wrapper-2">Inventory</div>
+            <!-- Text for recipes section -->
+            <div class="text-wrapper-3">Recipes</div>
+            <!-- Divider elements for visual separation -->
+            <div class="views-dividers"></div>
+            <div class="views-dividers-2"></div>
+            <div class="views-dividers-3"></div>
+            <!-- Additional frame sections, similar to the first frame -->
+            <section class="frame-3 uk-flex uk-flex-center uk-flex-middle">
+                <figure class="apple-wrapper uk-border-circle uk-border">
+                    <img class="apple" src="./assets/img/apple-icon.png" alt="Apple Icon" />
+                </figure>
+                <div class="text-wrapper">Item()</div>
+                <div class="text-wrapper">Ex Date</div>
+                <button class="controls-buttons uk-button uk-button-default">
+                    <span class="text">Edit</span>
+                </button>
+            </section>
+            <section class="frame-4 uk-flex uk-flex-center uk-flex-middle">
+                <figure class="apple-wrapper uk-border-circle uk-border">
+                    <img class="apple" src="./assets/img/apple-icon.png" alt="Apple Icon" />
+                </figure>
+                <div class="text-wrapper">Item()</div>
+                <div class="text-wrapper">Ex Date</div>
+                <button class="controls-buttons uk-button uk-button-default">
+                    <span class="text">Edit</span>
+                </button>
+            </section>
+            <div class="views-dividers-4"></div>
+            <div class="views-dividers-5"></div>
+            <section class="frame-5 uk-flex uk-flex-center uk-flex-middle">
+                <figure class="apple-wrapper uk-border-circle uk-border">
+                    <img class="apple" src="./assets/img/apple-icon.png" alt="Apple Icon" />
+                </figure>
+                <div class="text-wrapper">Item()</div>
+                <div class="text-wrapper">Ex Date</div>
+                <button class="controls-buttons uk-button uk-button-default">
+                    <span class="text">Edit</span>
+                </button>
+            </section>
+            <div class="views-dividers-6"></div>
+            <section class="frame-6 uk-flex uk-flex-center uk-flex-middle">
+                <figure class="apple-wrapper uk-border-circle uk-border">
+                    <img class="apple" src="./assets/img/apple-icon.png" alt="Apple Icon" />
+                </figure>
+                <div class="text-wrapper">Item()</div>
+                <div class="text-wrapper">Ex Date</div>
+                <button class="controls-buttons uk-button uk-button-default">
+                    <span class="text">Edit</span>
+                </button>
+            </section>
+            <div class="views-dividers-7"></div>
+            <section class="frame-7 uk-flex uk-flex-center uk-flex-middle">
+                <figure class="apple-wrapper uk-border-circle uk-border">
+                    <img class="apple" src="./assets/img/apple-icon.png" alt="Apple Icon" />
+                </figure>
+                <div class="text-wrapper">Item()</div>
+                <div class="text-wrapper">Ex Date</div>
+                <button class="controls-buttons uk-button uk-button-default">
+                    <span class="text">Edit</span>
+                </button>
+            </section>
+            <div class="views-dividers-8"></div>
+            <section class="frame-8 uk-flex uk-flex-center uk-flex-middle">
+                <figure class="apple-wrapper uk-border-circle uk-border">
+                    <img class="apple" src="./assets/img/apple-icon.png" alt="Apple Icon" />
+                </figure>
+                <div class="text-wrapper">Item()</div>
+                <div class="text-wrapper">Ex Date</div>
+                <button class="controls-buttons uk-button uk-button-default">
+                    <span class="text">Edit</span>
+                </button>
+            </section>
+            <div class="views-dividers-9"></div>
+            <!-- Rectangle elements for additional UI components -->
+            <div class="rectangle"></div>
+            <div class="rectangle-2"></div>
+            <div class="rectangle-3"></div>
+            <div class="rectangle-4"></div>
+            <div class="rectangle-5"></div>
+            <div class="rectangle-6"></div>
+            <div class="rectangle-7"></div>
+            <div class="rectangle-8"></div>
+            <!-- Overlapping section with a plus icon -->
+            <div class="overlap">
+                <div class="rectangle-9"></div>
+                <div class="heroicons-solid-plus-wrapper uk-flex uk-flex-center uk-flex-middle">
+                    <img class="heroicons-solid-plus" src="./assets/img/plus-sign.png" alt="Plus Sign" />
+                </div>
             </div>
-        </div>
-
-        <!-- Grocery Items List -->
-        <div class="card">
-            <div class="card-header">Grocery Items</div>
-            <div class="card-body">
-                <ul class="uk-list uk-list-divider">
-                    <li>Milk - Expires in 3 days</li>
-                    <li>Bread - Expires in 5 days</li>
-                    <li>Eggs - Expires in 7 days</li>
-                    <!-- Add more items as needed -->
-                </ul>
-            </div>
-        </div>
-
-        <!-- Recipes -->
-        <div class="card">
-            <div class="card-header">Recipes</div>
-            <div class="card-body">
-                <ul class="uk-list uk-list-bullet">
-                    <li>Recipe 1: Ingredients A, B, C</li>
-                    <li>Recipe 2: Ingredients D, E, F</li>
-                    <li>Recipe 3: Ingredients G, H, I</li>
-                    <!-- Add more recipes as needed -->
-                </ul>
-            </div>
-        </div>
-
-        <!-- Add Items Manually -->
-        <div class="card">
-            <div class="card-header">Add Items</div>
-            <div class="card-body">
-                <form>
-                    <div class="uk-margin">
-                        <input class="uk-input" type="text" placeholder="Item Name">
-                    </div>
-                    <div class="uk-margin">
-                        <input class="uk-input" type="text" placeholder="Quantity">
-                    </div>
-                    <div class="uk-margin">
-                        <input class="uk-input" type="date" placeholder="Expiration Date">
-                    </div>
-                    <button class="uk-button uk-button-primary" type="submit">Add Item</button>
-                </form>
-            </div>
-        </div>
+        </main>
     </div>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/uikit@3.7.2/dist/js/uikit.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/uikit@3.7.2/dist/js/uikit-icons.min.js"></script>
-<script src="./assets/js/script.js"></script>
+    <!-- Importing UIKit JS framework -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.22/dist/js/uikit.min.js"></script>
+    <!-- Importing UIKit icons JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.22/dist/js/uikit-icons.min.js"></script>
 </body>
 </html>
-

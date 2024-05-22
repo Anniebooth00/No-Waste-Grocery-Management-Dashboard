@@ -1,0 +1,65 @@
+/* Importing a CSS reset to ensure consistency across browsers */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+/* Importing Google Fonts for use in the document */
+@import url("https://fonts.googleapis.com/css?family=Inter:var(--regular-none-medium-font-weight),var(--large-none-regular-font-weight)");
+
+/* Applying smooth font rendering and box-sizing rules to all elements */
+* {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+/* Setting margin and height for the html and body elements */
+html,
+body {
+  margin: 0px;
+  height: 100%;
+}
+
+/* Custom focus style for buttons to improve accessibility */
+button:focus-visible {
+  outline: 2px solid #a6a6a6 !important;
+  outline: -webkit-focus-ring-color auto 5px !important;
+}
+
+/* Removing the default underline from anchor tags */
+a {
+  text-decoration: none;
+}
+
+/* Defining custom font faces for different styles of the "Neue Montreal" font family */
+@font-face {
+  font-family: "Neue Montreal-Bold";
+  src: url("../fonts/NeueMontreal-Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Neue Montreal-Bold Italic";
+  src: url("../fonts/NeueMontreal-BoldItalic.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Neue Montreal-Medium";
+  src: url("../fonts/NeueMontreal-Medium.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Neue Montreal-Medium Italic";
+  src: url("../fonts/NeueMontreal-MediumItalic.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Neue Montreal-Regular";
+  src: url("../fonts/NeueMontreal-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Neue Montreal-Light";
+  src: url("../fonts/NeueMontreal-Light.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Neue Montreal-Light Italic";
+  src: url("../fonts/NeueMontreal-LightItalic.otf") format("opentype");
+}
