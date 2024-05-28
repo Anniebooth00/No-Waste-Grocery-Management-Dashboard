@@ -1,454 +1,98 @@
-/* Container for the entire iPhone layout */
-.iphone {
+/* Base styles for mobile devices */
+.container {
     background-color: #ffffff;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Navbar styles */
+.group {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f8f8; /* Background color for the navbar */
+}
+
+.overlap-group {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.heroicons-solid, .heroicons-solid-cog {
+    width: 30px;
+    height: 30px;
+}
+
+main {
     width: 100%;
 }
 
-/* Wrapper for the iPhone screen */
-.iphone .div {
-    background-color: #ffffff;
-    overflow: hidden;
-    width: 390px;
-    height: 844px;
-    position: relative;
-}
-
-/* Group element at the top of the iPhone screen */
-.iphone .group {
-    position: absolute;
-    width: 390px;
-    height: 48px;
-    top: 0;
-    left: 0;
-}
-
-/* Container for navigation bar elements */
-.iphone .overlap-group {
-    position: relative;
-    height: 48px;
-}
-
-/* Navigation bar background */
-.iphone .bars-nav-bars {
-    position: absolute;
-    width: 390px;
-    height: 48px;
-    top: 0;
-    left: 0;
-    background-color: var(--skywhite);
-}
-
-/* Title element in the navigation bar */
-.iphone .title {
-    position: absolute;
-    height: 18px;
-    top: 14px;
-    left: 160px;
-    font-family: "Neue Montreal-Regular", Helvetica;
-    font-weight: 400;
-    color: var(--inkdarkest);
-    font-size: 18px;
-    text-align: center;
-    letter-spacing: 0;
-    line-height: 18px;
-    white-space: nowrap;
-}
-
-/* Icon on the left side of the navigation bar */
-.iphone .heroicons-solid {
-    position: absolute;
-    width: 24px;
-    height: 24px;
-    top: 12px;
-    left: 20px;
-}
-
-/* Cog icon on the right side of the navigation bar */
-.iphone .heroicons-solid-cog {
-    position: absolute;
-    width: 24px;
-    height: 24px;
-    top: 15px;
-    left: 346px;
-}
-
-/* Frame container below the navigation bar */
-.iphone .frame {
-    top: 86px;
-    display: inline-flex;
-    align-items: center;
-    gap: 66px;
-    position: absolute;
-    left: 20px;
-}
-
-/* Wrapper for the Apple logo */
-.iphone .apple-wrapper {
-    position: relative;
-    width: 28px;
-    height: 28px;
-    border-radius: 14px;
-    border: 1px solid;
-    border-color: #d5d5d5;
-}
-
-/* Apple logo */
-.iphone .apple {
-    position: absolute;
-    width: 11px;
-    height: 13px;
-    top: 7px;
-    left: 8px;
-}
-
-/* Text element */
-.iphone .text-wrapper {
-    position: relative;
-    width: fit-content;
+.text-wrapper-2 {
     font-family: "Neue Montreal-Regular", Helvetica;
     font-weight: 400;
     color: #000000;
-    font-size: 12px;
+    font-size: 24px;
     text-align: center;
-    letter-spacing: 0;
-    line-height: 18px;
-    white-space: nowrap;
+    margin-top: 20px;
 }
 
-/* Button with control actions */
-.iphone .controls-buttons {
-    all: unset;
-    box-sizing: border-box;
+/* Styling the empty items list div */
+.items-list {
+    width: calc(100% - 40px); /* 20px off the edge on both sides */
+    margin-top: 20px;
     display: flex;
-    flex-direction: column;
-    width: 53px;
-    height: 20px;
+    flex-direction: column; /* Ensures children stack vertically */
     align-items: center;
-    justify-content: center;
-    padding: 8px 16px;
-    position: relative;
+    gap: 20px;
+    border: 1px solid #e0e0e0; /* Light border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding inside the div */
+}
+
+/* Image inside the items list div */
+.sample-image {
+    max-width: 200px; /* Maximum width for the image */
+    width: 100%; /* Ensures the image scales down if needed */
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Button inside the items list div */
+.add-item-button {
+    margin-top: 20px;
     background-color: var(--light-olive);
-    border-radius: 48px;
-}
-
-/* Text inside the controls button */
-.iphone .text {
-    position: relative;
-    width: fit-content;
-    margin-top: -7px;
-    margin-bottom: -5px;
-    font-family: "Neue Montreal-Regular", Helvetica;
-    font-weight: 400;
     color: var(--black);
-    font-size: 10px;
-    text-align: center;
-    letter-spacing: 0;
-    line-height: 16px;
-    white-space: nowrap;
+    font-family: var(--interactive-elements-buttons-font-family);
 }
 
-/* Text wrapper positioned below the navigation bar */
-.iphone .text-wrapper-2 {
-    position: absolute;
-    height: 18px;
-    top: 56px;
-    left: 20px;
-    font-family: "Neue Montreal-Regular", Helvetica;
-    font-weight: 400;
-    color: #000000;
-    font-size: 16px;
-    text-align: center;
-    letter-spacing: 0;
-    line-height: 18px;
-    white-space: nowrap;
+.add-item-button:hover {
+    margin-top: 20px;
+    background-color: var(--dark-olive);
+    color:var(--white);
 }
 
-/* Another text wrapper positioned lower on the screen */
-.iphone .text-wrapper-3 {
-    position: absolute;
-    height: 18px;
-    top: 421px;
-    left: 20px;
-    font-family: "Neue Montreal-Regular", Helvetica;
-    font-weight: 400;
-    color: #000000;
-    font-size: 16px;
-    text-align: center;
-    letter-spacing: 0;
-    line-height: 18px;
-    white-space: nowrap;
-}
+/* Styles for larger screens (desktops and tablets) */
+@media (min-width: 768px) {
+    .container {
+        padding: 40px;
+    }
 
-/* Divider lines separating sections */
-.iphone .views-dividers {
-    position: absolute;
-    width: 350px;
-    height: 1px;
-    top: 80px;
-    left: 20px;
-    background-color: var(--skylighter);
-}
+    .text-wrapper-2 {
+        font-size: 32px;
+    }
 
-.iphone .views-dividers-2 {
-    top: 121px;
-    position: absolute;
-    width: 350px;
-    height: 1px;
-    left: 20px;
-    background-color: var(--skylighter);
-}
-
-.iphone .views-dividers-3 {
-    top: 367px;
-    position: absolute;
-    width: 350px;
-    height: 1px;
-    left: 20px;
-    background-color: var(--skylighter);
-}
-
-/* Frame elements positioned in different sections */
-.iphone .frame-2 {
-    top: 332px;
-    display: inline-flex;
-    align-items: center;
-    gap: 66px;
-    position: absolute;
-    left: 20px;
-}
-
-.iphone .frame-3 {
-    top: 127px;
-    display: inline-flex;
-    align-items: center;
-    gap: 66px;
-    position: absolute;
-    left: 20px;
-}
-
-.iphone .frame-4 {
-    top: 373px;
-    display: inline-flex;
-    align-items: center;
-    gap: 66px;
-    position: absolute;
-    left: 20px;
-}
-
-/* Additional divider lines */
-.iphone .views-dividers-4 {
-    top: 162px;
-    position: absolute;
-    width: 350px;
-    height: 1px;
-    left: 20px;
-    background-color: var(--skylighter);
-}
-
-.iphone .views-dividers-5 {
-    top: 408px;
-    position: absolute;
-    width: 350px;
-    height: 1px;
-    left: 20px;
-    background-color: var(--skylighter);
-}
-
-/* More frame elements */
-.iphone .frame-5 {
-    top: 168px;
-    display: inline-flex;
-    align-items: center;
-    gap: 66px;
-    position: absolute;
-    left: 20px;
-}
-
-.iphone .views-dividers-6 {
-    top: 203px;
-    position: absolute;
-    width: 350px;
-    height: 1px;
-    left: 20px;
-    background-color: var(--skylighter);
-}
-
-.iphone .frame-6 {
-    top: 209px;
-    display: inline-flex;
-    align-items: center;
-    gap: 66px;
-    position: absolute;
-    left: 20px;
-}
-
-/* Even more divider lines */
-.iphone .views-dividers-7 {
-    top: 244px;
-    position: absolute;
-    width: 350px;
-    height: 1px;
-    left: 20px;
-    background-color: var(--skylighter);
-}
-
-.iphone .frame-7 {
-    top: 250px;
-    display: inline-flex;
-    align-items: center;
-    gap: 66px;
-    position: absolute;
-    left: 20px;
-}
-
-.iphone .views-dividers-8 {
-    top: 285px;
-    position: absolute;
-    width: 350px;
-    height: 1px;
-    left: 20px;
-    background-color: var(--skylighter);
-}
-
-.iphone .frame-8 {
-    top: 291px;
-    display: inline-flex;
-    align-items: center;
-    gap: 66px;
-    position: absolute;
-    left: 20px;
-}
-
-.iphone .views-dividers-9 {
-    top: 326px;
-    position: absolute;
-    width: 350px;
-    height: 1px;
-    left: 20px;
-    background-color: var(--skylighter);
-}
-
-/* Rectangles used as placeholder elements */
-.iphone .rectangle {
-    top: 459px;
-    left: 20px;
-    position: absolute;
-    width: 112px;
-    height: 126px;
-    background-color: var(--light-grey);
-    border-radius: 25px;
-}
-
-.iphone .rectangle-2 {
-    top: 459px;
-    left: 139px;
-    position: absolute;
-    width: 112px;
-    height: 126px;
-    background-color: var(--light-grey);
-    border-radius: 25px;
-}
-
-.iphone .rectangle-3 {
-    top: 459px;
-    left: 258px;
-    position: absolute;
-    width: 112px;
-    height: 126px;
-    background-color: var(--light-grey);
-    border-radius: 25px;
-}
-
-.iphone .rectangle-4 {
-    top: 590px;
-    left: 20px;
-    position: absolute;
-    width: 112px;
-    height: 126px;
-    background-color: var(--light-grey);
-    border-radius: 25px;
-}
-
-.iphone .rectangle-5 {
-    top: 590px;
-    left: 139px;
-    position: absolute;
-    width: 112px;
-    height: 126px;
-    background-color: var(--light-grey);
-    border-radius: 25px;
-}
-
-.iphone .rectangle-6 {
-    top: 590px;
-    left: 258px;
-    position: absolute;
-    width: 112px;
-    height: 126px;
-    background-color: var(--light-grey);
-    border-radius: 25px;
-}
-
-.iphone .rectangle-7 {
-    top: 721px;
-    left: 20px;
-    position: absolute;
-    width: 112px;
-    height: 126px;
-    background-color: var(--light-grey);
-    border-radius: 25px;
-}
-
-.iphone .rectangle-8 {
-    top: 721px;
-    left: 139px;
-    position: absolute;
-    width: 112px;
-    height: 126px;
-    background-color: var(--light-grey);
-    border-radius: 25px;
-}
-
-/* Overlapping element for complex layout */
-.iphone .overlap {
-    position: absolute;
-    width: 113px;
-    height: 126px;
-    top: 721px;
-    left: 258px;
-}
-
-/* Rectangle with plus icon */
-.iphone .rectangle-9 {
-    top: 0;
-    left: 0;
-    position: absolute;
-    width: 112px;
-    height: 126px;
-    background-color: var(--light-grey);
-    border-radius: 25px;
-}
-
-/* Wrapper for the plus icon */
-.iphone .heroicons-solid-plus-wrapper {
-    position: absolute;
-    width: 73px;
-    height: 73px;
-    top: 26px;
-    left: 40px;
-    background-color: var(--white);
-    border-radius: 36.5px;
-    box-shadow: 0px 4px 4px #00000040;
-}
-
-/* Plus icon */
-.iphone .heroicons-solid-plus {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    top: 17px;
-    left: 17px;
+    .items-list {
+        width: calc(100% - 40px); /* 20px off the edge on both sides */
+        flex-direction: column; /* Ensures children stack vertically */
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
 }
