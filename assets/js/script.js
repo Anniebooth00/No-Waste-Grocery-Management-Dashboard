@@ -113,4 +113,29 @@ document.addEventListener("DOMContentLoaded", () => {
             recipeListElement.appendChild(listItem);
         });
     };
+
+    // Get the modal element
+    const modal = document.getElementById('itemModal');
+    const btn = document.getElementById('openModalBtn');
+    const closeModalBtn = document.getElementById('closeModalBtn');
+
+
+    // When the user clicks the button, open the modal
+    btn.onclick = function() {
+    modal.style.display = 'block';
+    }
+
+     // When the user clicks on the close button, close the modal
+     closeModalBtn.onclick = function() {
+        modal.style.display = 'none';
+    }
+
+    window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = 'none';
+        }
+    }
+
 });
+
+

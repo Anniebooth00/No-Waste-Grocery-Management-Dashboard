@@ -13,7 +13,7 @@
     <!-- Setting the title of the page -->
     <title>NoWaste</title>
     <!-- Importing responsive CSS styles -->
-    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
     <!-- Main container for the app -->
@@ -44,13 +44,51 @@
             <div class="text-wrapper-2">Inventory</div>
             <div class="items-list">
                 <img src="./assets/img/grocery.gif" alt="Sample Image" class="sample-image">
-                <button class="add-item-button uk-button uk-button-primary">Add Groceries</button>
+                <button class="add-item-button uk-button uk-button-primary" id="openModalBtn">Add Groceries</button>
+
+                <!--Modal Form-->
+                <div class="modal" id="itemModal">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="itemModalLabel">Add Items</h5>
+                          <button type="button" class="btn-close" id="closeModalBtn" aria-label="Close">x</button>
+                        </div>
+                        <div class="modal-body">
+                          <form id="itemForm">
+                            <div class="mb-3">
+                              <label for="itemName" class="form-label">Item Name</label>
+                              <input type="text" class="form-control" id="itemName" name="itemName" required>
+                            </div>
+                            <div class="mb-3">
+                              <label for="quantity" class="form-label">Quantity</label>
+                              <div class="input-group">
+                                <button type="button" class="btn" id="decreaseBtn">-</button>
+                                <input type="text" class="form-control" id="quantity" name="quantity" value="1" required>
+                                <button type="button" class="btn" id="increaseBtn">+</button>
+                              </div>
+                            </div>
+                            <div class="mb-3">
+                              <label for="expDate" class="form-label">Expiration Date</label>
+                              <input type="date" class="form-control" id="expDate" name="expDate" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary" id="addItemBtn">Add Item</button>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                </div>
             </div>
+
+            <button id="upload-receipt-button">Upload Receipt</button>
+
         </main>      
     </div>
     <!-- Importing UIKit JS framework -->
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.22/dist/js/uikit.min.js"></script>
     <!-- Importing UIKit icons JS -->
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.22/dist/js/uikit-icons.min.js"></script>
+
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>
