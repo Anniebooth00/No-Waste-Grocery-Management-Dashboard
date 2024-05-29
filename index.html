@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="./assets/css/globals.css">
     <!-- Importing style guide CSS styles -->
     <link rel="stylesheet" href="./assets/css/styleguide.css">
+    <!-- Importing Font Awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <!-- Importing custom CSS styles -->
     <link rel="stylesheet" href="./assets/css/style.css">
     <!-- Setting the title of the page -->
@@ -58,6 +60,18 @@
                           <form id="itemForm">
                             <div class="mb-3">
                               <label for="itemName" class="form-label">Item Name</label>
+                              <div class="input-group">
+                                <div class="col-4 dropdown" style="margin-top: 0;">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="iconDropdown" aria-expanded="false">
+                                        Select Icon
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="iconDropdown">
+                                        <li><a class="dropdown-item" href="#"><i class="fas fa-apple-alt"></i></a>Fruit</li>
+                                        <li><a class="dropdown-item" href="#"><i class="fas fa-carrot"></i></a>Vegetable</li>
+                                        <li><a class="dropdown-item" href="#"><i class="fas fa-drumstick-bite"></i></a>Animal Product</li>
+                                        <li><a class="dropdown-item" href="#"><i class="fas fa-wine-bottle"></i></a>Beverage</li>
+                                    </ul>
+                                </div>
                               <input type="text" class="form-control" id="itemName" name="itemName" required>
                             </div>
                             <div class="mb-3">

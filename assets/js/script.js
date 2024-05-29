@@ -155,4 +155,15 @@ document.getElementById('decreaseBtn').addEventListener('click', function() {
     }
   });
 
+// Dropdown icon selection
+const dropdownItems = document.querySelectorAll('.dropdown-item');
+const iconDropdownButton = document.getElementById('iconDropdown');
 
+dropdownItems.forEach(item => {
+    item.addEventListener('click', function(event) {
+        event.preventDefault();
+        const selectedIcon = this.querySelector('i').cloneNode(true); // Clone the icon element
+        iconDropdownButton.innerHTML = ''; // Clear existing content
+        iconDropdownButton.appendChild(selectedIcon); // Append the selected icon
+    });
+});
