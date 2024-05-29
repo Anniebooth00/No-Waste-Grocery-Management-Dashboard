@@ -3,19 +3,19 @@ document.addEventListener("DOMContentLoaded", () => {
     const groceryListElement = document.querySelector("#grocery-list");
     const recipeListElement = document.querySelector("#recipe-list");
 
-    uploadButton.addEventListener("click", () => {
-        // Placeholder for file input
-        const fileInput = document.createElement("input");
-        fileInput.type = "file";
-        fileInput.accept = "image/*";
-        fileInput.onchange = async (event) => {
-            const file = event.target.files[0];
-            if (file) {
-                await scanReceipt(file);
-            }
-        };
-        fileInput.click();
-    });
+    // uploadButton.addEventListener("click", () => {
+    //     // Placeholder for file input
+    //     const fileInput = document.createElement("input");
+    //     fileInput.type = "file";
+    //     fileInput.accept = "image/*";
+    //     fileInput.onchange = async (event) => {
+    //         const file = event.target.files[0];
+    //         if (file) {
+    //             await scanReceipt(file);
+    //         }
+    //     };
+    //     fileInput.click();
+    // });
 
     const scanReceipt = async (file) => {
         const formData = new FormData();
@@ -137,5 +137,22 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 });
+
+// Increment & Decrement
+document.getElementById('decreaseBtn').addEventListener('click', function() {
+    var quantityInput = document.getElementById('quantity');
+    var currentValue = parseInt(quantityInput.value);
+    if (!isNaN(currentValue) && currentValue > 1) {
+      quantityInput.value = currentValue - 1;
+    }
+  });
+
+  document.getElementById('increaseBtn').addEventListener('click', function() {
+    var quantityInput = document.getElementById('quantity');
+    var currentValue = parseInt(quantityInput.value);
+    if (!isNaN(currentValue)) {
+      quantityInput.value = currentValue + 1;
+    }
+  });
 
 
