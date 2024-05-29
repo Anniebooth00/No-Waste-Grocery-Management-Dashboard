@@ -15,7 +15,12 @@
     <!-- Setting the title of the page -->
     <title>NoWaste</title>
     <!-- Importing responsive CSS styles -->
+
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="./assets/css/api.css">
+
     <link rel="stylesheet" href="./assets/css/style.css">
+
 </head>
 <body>
     <!-- Main container for the app -->
@@ -43,6 +48,72 @@
         </header>
         <!-- Main content section -->
         <main>
+            <div class="uk-grid-divider uk-child-width-1-2@m" uk-grid>
+                <div>
+                    <div class="items-list">
+                        <div class="text-wrapper-2">Inventory</div>
+                        <img src="./assets/img/grocery.gif" alt="Sample Image" class="sample-image">
+                        <button class="add-item-button uk-button uk-button-primary">Add Groceries</button>
+                    </div>
+                </div>
+                <div>
+                    <div class = "container">
+                        <div class = "meal-wrapper">
+                          <div class = "meal-search">
+                            <h2 class = "title">Uncover Meals Using What You Have</h2>
+                            <blockquote>One man’s trash is another man’s treasure, and the by-product from one food can be perfect for making another.<br>
+                              <cite>- Yotam Ottolenghi</cite>
+                            </blockquote>
+                            <div class = "meal-search-box">
+                              <input type = "text" class = "search-control" placeholder="Enter an ingredient" id = "search-input">
+                              <button type = "submit" class = "search-btn btn" id = "search-btn">
+                                <i class = "fas fa-search"></i>
+                              </button>
+                            </div>
+                          </div>
+                          <div class = "meal-result">
+                            <h2 class = "title">Your Search Results:</h2>
+                            <div id= "meal">
+                              <!-- meal item -->
+                              <!-- <div class = "meal-item">
+                                <div class = "meal-img">
+                                  <img src = "food.jpg" alt = "food">
+                                </div>
+                                <div class = "meal-name">
+                                  <h3>Potato Chips</h3>
+                                  <a href = "#" class = "recipe-btn">Get Recipe</a>
+                                </div>
+                              </div> -->
+                              <!-- end of meal item -->
+                            </div>
+                          </div>
+                          <div class = "meal-details">
+                            <!-- recipe close btn -->
+                            <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn">
+                              <i class = "fas fa-times"></i>
+                            </button>
+                            <!-- meal content -->
+                            <div class = "meal-details-content">
+                              <!-- <h2 class = "recipe-title">Meals Name Here</h2>
+                              <p class = "recipe-category">Category Name</p>
+                              <div class = "recipe-instruct">
+                                <h3>Instructions:</h3>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo blanditiis quis accusantium natus! Porro, reiciendis maiores molestiae distinctio veniam ratione ex provident ipsa, soluta suscipit quam eos velit autem iste!</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquam voluptatibus ad obcaecati magnam, esse numquam nisi ut adipisci in?</p>
+                              </div>
+                              <div class = "recipe-meal-img">
+                                <img src = "food.jpg" alt = "">
+                              </div>
+                              <div class = "recipe-link">
+                                <a href = "#" target = "_blank">Watch Video</a>
+                              </div> -->
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </main>     
             <div class="text-wrapper-2">Inventory</div>
             <div class="items-list">
                 <img src="./assets/img/grocery.gif" alt="Sample Image" class="sample-image">
@@ -103,6 +174,10 @@
     <!-- Importing UIKit icons JS -->
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.22/dist/js/uikit-icons.min.js"></script>
 
+    <script src="./assets/js/api.js"></script>
+
+
     <script src="./assets/js/script.js"></script>
+
 </body>
 </html>
