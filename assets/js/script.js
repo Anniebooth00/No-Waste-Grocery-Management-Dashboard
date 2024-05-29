@@ -3,19 +3,19 @@ document.addEventListener("DOMContentLoaded", () => {
     const groceryListElement = document.querySelector("#grocery-list");
     const recipeListElement = document.querySelector("#recipe-list");
 
-    uploadButton.addEventListener("click", () => {
-        // Placeholder for file input
-        const fileInput = document.createElement("input");
-        fileInput.type = "file";
-        fileInput.accept = "image/*";
-        fileInput.onchange = async (event) => {
-            const file = event.target.files[0];
-            if (file) {
-                await scanReceipt(file);
-            }
-        };
-        fileInput.click();
-    });
+    // uploadButton.addEventListener("click", () => {
+    //     // Placeholder for file input
+    //     const fileInput = document.createElement("input");
+    //     fileInput.type = "file";
+    //     fileInput.accept = "image/*";
+    //     fileInput.onchange = async (event) => {
+    //         const file = event.target.files[0];
+    //         if (file) {
+    //             await scanReceipt(file);
+    //         }
+    //     };
+    //     fileInput.click();
+    // });
 
     const scanReceipt = async (file) => {
         const formData = new FormData();
@@ -113,4 +113,57 @@ document.addEventListener("DOMContentLoaded", () => {
             recipeListElement.appendChild(listItem);
         });
     };
+
+    // Get the modal element
+    const modal = document.getElementById('itemModal');
+    const btn = document.getElementById('openModalBtn');
+    const closeModalBtn = document.getElementById('closeModalBtn');
+
+
+    // When the user clicks the button, open the modal
+    btn.onclick = function() {
+    modal.style.display = 'block';
+    }
+
+     // When the user clicks on the close button, close the modal
+     closeModalBtn.onclick = function() {
+        modal.style.display = 'none';
+    }
+
+    window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = 'none';
+        }
+    }
+
+});
+
+// Increment & Decrement
+document.getElementById('decreaseBtn').addEventListener('click', function() {
+    var quantityInput = document.getElementById('quantity');
+    var currentValue = parseInt(quantityInput.value);
+    if (!isNaN(currentValue) && currentValue > 1) {
+      quantityInput.value = currentValue - 1;
+    }
+  });
+
+  document.getElementById('increaseBtn').addEventListener('click', function() {
+    var quantityInput = document.getElementById('quantity');
+    var currentValue = parseInt(quantityInput.value);
+    if (!isNaN(currentValue)) {
+      quantityInput.value = currentValue + 1;
+    }
+  });
+
+// Dropdown icon selection
+const dropdownItems = document.querySelectorAll('.dropdown-item');
+const iconDropdownButton = document.getElementById('iconDropdown');
+
+dropdownItems.forEach(item => {
+    item.addEventListener('click', function(event) {
+        event.preventDefault();
+        const selectedIcon = this.querySelector('i').cloneNode(true); // Clone the icon element
+        iconDropdownButton.innerHTML = ''; // Clear existing content
+        iconDropdownButton.appendChild(selectedIcon); // Append the selected icon
+    });
 });
