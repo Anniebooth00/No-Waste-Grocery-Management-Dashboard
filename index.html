@@ -2,8 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <!-- Importing UIKit CSS framework for styling -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.22/dist/css/uikit.min.css">
     <!-- Importing global CSS styles -->
@@ -13,15 +11,10 @@
     <!-- Importing Font Awesome icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <!-- Importing custom CSS styles -->
+    <link rel="stylesheet" href="./assets/css/api.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <!-- Setting the title of the page -->
     <title>NoWaste</title>
-    <!-- Importing responsive CSS styles -->
-
-    <link rel="stylesheet" href="./assets/css/responsive.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/api.css">   
-
 </head>
 <body>
     <!-- Main container for the app -->
@@ -31,20 +24,14 @@
             <!-- Navigation bar with UIKit navbar class -->
             <nav class="overlap-group uk-navbar">
                 <!-- Left section of the navbar, aligned vertically in the center -->
-                <div class="uk-navbar-left uk-flex uk-flex-middle">
-                    <!-- Image for the viewfinder circle icon -->
-                    <img class="heroicons-solid" src="./assets/img/viewfinder-circle.png" alt="Viewfinder Circle" />
-                </div>
+
                 <!-- Center section of the navbar for the title -->
                 <div class="uk-navbar-center">
                     <!-- Link element styled as the logo -->
                     <a href="#" class="uk-navbar-item uk-logo">NoWaste</a>
                 </div>
                 <!-- Right section of the navbar, aligned vertically in the center -->
-                <div class="uk-navbar-right uk-flex uk-flex-middle">
-                    <!-- Image for the settings icon -->
-                    <img class="heroicons-solid-cog" src="./assets/img/settings-icon.png" alt="Settings Icon" />
-                </div>
+
             </nav>
         </header>
         <!-- Main content section -->
@@ -53,103 +40,116 @@
                 <div>
                     <div class="items-list">
                         <div class="text-wrapper-2">Inventory</div>
-                        <img src="./assets/img/grocery.gif" alt="Sample Image" class="sample-image">
-                        <button class="add-item-button uk-button uk-button-primary">Add Groceries</button>
+                        <img src="./assets/img/grocery.gif" alt="Sample Image" class="sample-image" id="sampleImage">
+                        <button class="add-item-button uk-button uk-button-primary" id="openModalBtn">Add Groceries</button>
+                        <div class="items-container" id="itemsContainer">
+                            <div class="category" id="beveragesCategory">
+                                
+                                <div class="items"></div>
+                            </div>
+                            <div class="category" id="fruitsCategory">
+                                
+                                <div class="items"></div>
+                            </div>
+                            <div class="category" id="vegetablesCategory">
+                                
+                                <div class="items"></div>
+                            </div>
+                            <div class="category" id="animalProductsCategory">
+                                
+                                <div class="items"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div>
-                    <div class = "container">
-                        <div class = "meal-wrapper">
-                          <div class = "meal-search">
-                            <h2 class = "title">Uncover Meals Using What You Have</h2>
-                            <blockquote>One man’s trash is another man’s treasure, and the by-product from one food can be perfect for making another.<br>
-                              <cite>- Yotam Ottolenghi</cite>
-                            </blockquote>
-                            <div class = "meal-search-box">
-                              <input type = "text" class = "search-control" placeholder="Enter an ingredient" id = "search-input">
-                              <button type = "submit" class = "search-btn btn" id = "search-btn">
-                                <i class = "fas fa-search"></i>
-                              </button>
+                    <div class="container">
+                        <div class="meal-wrapper">
+                            <div class="meal-search">
+                                <h2 class="title">Search for recipes</h2>
+                                <div class="meal-search-box">
+                                    <input type="text" class="search-control" placeholder="Enter an ingredient" id="search-input">
+                                    <button type="submit" class="search-btn btn" id="search-btn">
+                                        <i class="fas fa-search"></i>
+                                    </button>
+                                </div>
                             </div>
-                          </div>
-                          <div class = "meal-result">
-                            <h2 class = "title">Your Search Results:</h2>
-                            <div id= "meal">
+                            <div class="meal-result">
+                                
+                                <div id="meal">
+                                    <!-- meal item -->
+                                    <!-- end of meal item -->
+                                </div>
                             </div>
-                          </div>
-                          <div class = "meal-details">
-                            <!-- recipe close btn -->
-                            <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn">
-                              <i class = "fas fa-times"></i>
-                            </button>
-                            <!-- meal content -->
-                            <div class = "meal-details-content">
+                            <div class="meal-details">
+                                <!-- recipe close btn -->
+                                <button type="button" class="btn recipe-close-btn" id="recipe-close-btn">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                                <!-- meal content -->
+                                <div class="meal-details-content">
+                                    <!-- content here -->
+                                </div>
                             </div>
-                          </div>
                         </div>
-                      </div>
+                    </div>
                 </div>
             </div>
-        </main>     
-            <div class="text-wrapper-2">Inventory</div>
-            <div class="items-list">
-                <img src="./assets/img/grocery.gif" alt="Sample Image" class="sample-image">
-                <button class="add-item-button uk-button uk-button-primary" id="openModalBtn">Add Groceries</button>
-
-                <!--Modal Form-->
-                <div class="modal" id="itemModal">
-                    <div class="modal-dialog">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h5 class="modal-title" id="itemModalLabel">Add Items</h5>
-                          <button type="button" class="btn-close" id="closeModalBtn" aria-label="Close">x</button>
-                        </div>
-                        <div class="modal-body">
-                          <form id="itemForm">
+        </main>
+        <!-- Modal Form -->
+        <div class="modal" id="itemModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="itemModalLabel">Add Items</h5>
+                        <button type="button" class="btn-close" id="closeModalBtn" aria-label="Close">x</button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="itemForm">
                             <div class="mb-3">
-                              <label for="itemName" class="form-label">Item Name</label>
-                              <div class="input-group">
-                                <div class="col-4 dropdown" style="margin-top: 0;">
-                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="iconDropdown" aria-expanded="false">
-                                        Select Icon
-                                    </button>
-                                    <ul class="dropdown-menu" aria-labelledby="iconDropdown">
-                                        <li><a class="dropdown-item" href="#"><i class="fas fa-apple-alt"></i></a>Fruit</li>
-                                        <li><a class="dropdown-item" href="#"><i class="fas fa-carrot"></i></a>Vegetable</li>
-                                        <li><a class="dropdown-item" href="#"><i class="fas fa-drumstick-bite"></i></a>Animal Product</li>
-                                        <li><a class="dropdown-item" href="#"><i class="fas fa-wine-bottle"></i></a>Beverage</li>
-                                    </ul>
+                                <label for="itemName" class="form-label">Item Name</label>
+                                <div class="input-group">
+                                    <div class="col-4 dropdown" style="margin-top: 0;">
+                                        <button class="btn btn-secondary dropdown-toggle" type="button" id="iconDropdown" aria-expanded="false">
+                                            Select Icon
+                                        </button>
+                                        <ul class="dropdown-menu" aria-labelledby="iconDropdown">
+                                            <li><a class="dropdown-item" href="#"><i class="fas fa-apple-alt"></i></a>Fruit</li>
+                                            <li><a class="dropdown-item" href="#"><i class="fas fa-carrot"></i></a>Vegetable</li>
+                                            <li><a class="dropdown-item" href="#"><i class="fas fa-drumstick-bite"></i></a>Animal Product</li>
+                                            <li><a class="dropdown-item" href="#"><i class="fas fa-wine-bottle"></i></a>Beverage</li>
+                                        </ul>
+                                    </div>
+                                    <input type="text" class="form-control" id="itemName" name="itemName" required>
                                 </div>
-                              <input type="text" class="form-control" id="itemName" name="itemName" required>
                             </div>
                             <div class="mb-3">
-                              <label for="quantity" class="form-label">Quantity</label>
-                              <div class="input-group">
-                                <button type="button" class="btn" id="decreaseBtn">-</button>
-                                <input type="text" class="form-control" id="quantity" name="quantity" value="1" required>
-                                <button type="button" class="btn" id="increaseBtn">+</button>
-                              </div>
+                                <label for="quantity" class="form-label">Quantity</label>
+                                <div class="input-group">
+                                    <button type="button" class="btn" id="decreaseBtn">-</button>
+                                    <input type="text" class="form-control" id="quantity" name="quantity" value="1" required>
+                                    <button type="button" class="btn" id="increaseBtn">+</button>
+                                </div>
                             </div>
                             <div class="mb-3">
-                              <label for="expDate" class="form-label">Expiration Date</label>
-                              <input type="date" class="form-control" id="expDate" name="expDate" required>
+                                <label for="expDate" class="form-label">Expiration Date</label>
+                                <input type="date" class="form-control" id="expDate" name="expDate" required>
                             </div>
                             <div class="button-container">
                                 <button type="submit" class="btn btn-primary" id="addItemBtn">Add Item</button>
                             </div>
-                          </form>
-                        </div>
-                      </div>
+                        </form>
                     </div>
                 </div>
             </div>
-
-        </main>      
+        </div>
     </div>
     <!-- Importing UIKit JS framework -->
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.22/dist/js/uikit.min.js"></script>
     <!-- Importing UIKit icons JS -->
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.22/dist/js/uikit-icons.min.js"></script>
+
     <script src="./assets/js/api.js"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>
