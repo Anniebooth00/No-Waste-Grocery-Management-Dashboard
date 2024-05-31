@@ -66,7 +66,8 @@ addItemBtn.addEventListener('click', function(event) {
     
     const itemName = itemNameInput.value;
     const quantity = quantityInput.value;
-    const expDate = new Date(expDateInput.value);
+    // Parse the date input value correctly
+    const expDate = new Date(expDateInput.value + "T00:00:00"); // Ensure time is set to start of the day
     const selectedIconHtml = iconDropdownButton.innerHTML;
     const selectedIconClass = iconDropdownButton.querySelector('i').className;
 
