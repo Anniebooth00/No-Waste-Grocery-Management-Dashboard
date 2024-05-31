@@ -129,8 +129,18 @@ function addItemToPage(item) {
             <div class="item-name">${item.name}</div>
             <div class="item-quantity">Quantity: ${item.quantity}</div>
             <div class="item-expdate" data-expdate="${item.expDate}"></div>
+            <button class="delete-btn">Delete</button>
         </div>
     `;
+
+    // Add delete button event listener
+    const deleteBtn = itemElement.querySelector('.delete-btn');
+    deleteBtn.addEventListener('click', () => {
+        const itemElement = deleteBtn.closest('.item');
+        const itemId = itemElement.getAttribute('data-id'); // Get unique id
+        removeItemFromLocalStorage(itemId);
+        itemElement.remove();
+    });
 
     // Append the new item to the corresponding category
     if (item.iconClass.includes('fa-wine-bottle')) {
@@ -153,18 +163,10 @@ function startCountdown(element, expDate) {
         const now = new Date();
         const timeDiff = expDate - now;
         if (timeDiff <= 0) {
-            element.innerHTML = `Expired <button class="delete-btn">Delete</button>`;
+            element.innerHTML = `Expired`;
             element.classList.add('expired');
             clearInterval(timer);
 
-            // Add delete button event listener
-            const deleteBtn = element.querySelector('.delete-btn');
-            deleteBtn.addEventListener('click', () => {
-                const itemElement = deleteBtn.closest('.item');
-                const itemId = itemElement.getAttribute('data-id'); // Get unique id
-                removeItemFromLocalStorage(itemId);
-                itemElement.remove();
-            });
         } else {
             const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
             const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
