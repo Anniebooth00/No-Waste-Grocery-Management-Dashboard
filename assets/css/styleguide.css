@@ -10,6 +10,9 @@
     --skylighter: rgba(242, 244, 245, 1);
     --skywhite: rgba(255, 255, 255, 1);
     --primarybase: rgb(48, 48, 48);
+    --primary-error: rgb(182, 0, 0);
+    --primary-error-hover: rgb(147, 0, 0);
+
 
     /* Heading H1 styles */
     --headings-h1-font-family: "Neue Montreal", Helvetica;
