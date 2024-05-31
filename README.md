@@ -65,7 +65,7 @@ To run NoWaste, you can do either of the following:
 
 * Use the link:
   
-  [NoWaste]()
+  [NoWaste](https://anniebooth00.github.io/No-Waste-Grocery-Management-Dashboard/)
 
 * Clone the repository:
 ```
@@ -74,11 +74,11 @@ git clone git@github.com:Anniebooth00/No-Waste-Grocery-Management-Dashboard.git
 
 👇🏻 Below is a preview showing the functionality of the Task Management Board:
 
-[NoWaste Workaround]()
+[NoWaste Workaround](https://youtu.be/D5JQsQkhuNM?si=zfNWMCqDBGCv_wyD)
 
 
 
-![NoWaste Screenshot]()
+![NoWaste Screenshot](./assets/img/NoWaste-screenshot.png)
 
 
 ## ✏️ Credits
@@ -104,10 +104,10 @@ This project is licensed under the [MIT License](https://opensource.org/licenses
 
 ## ✏️ Contributing and Considerable Additional Features
 
-👀 Barcode scanning functionality for easy item entry.
-👀 Pop-up notifications for items nearing expiration or are expired.
-👀 Integration with grocery delivery services for seamless replenishment.
-👀 Customization of settings according to user preferences, such as notification frequency and recipe recommendations.
-👀 Social sharing features to exchange recipes and cooking tips with friends and family.
+    - 👀 Barcode scanning functionality for easy item entry.
+    - 👀 Pop-up notifications for items nearing expiration or are expired.
+    - 👀 Integration with grocery delivery services for seamless replenishment.
+    - 👀 Customization of settings according to user preferences, such as notification frequency and recipe recommendations.
+    - 👀 Social sharing features to exchange recipes and cooking tips with friends and family.
 
 If you have any ideas, suggestions, or bug reports, please feel free to open an issue or submit a pull request. Thank you so much! 💕
