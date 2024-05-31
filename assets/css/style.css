@@ -7,6 +7,7 @@
     align-items: center;
     width: 100%;
     padding: 20px;
+    margin-top: 20px;
 }
 
 /* Navbar styles */
@@ -194,7 +195,7 @@ main {
     cursor: pointer;
     padding: 0.5rem 1rem;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 23px;
     background-color: var(--dark-olive);
     color: white;
 }
@@ -234,4 +235,59 @@ main {
         flex-wrap: nowrap;
         justify-content: center;
     }
+}
+
+
+/* Style for the items container to use flexbox */
+.items-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.category {
+    margin-bottom: 20px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+}
+
+.item-icon {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.item-details {
+    display: flex;
+    align-items: center;
+}
+
+.item-name, .item-quantity, .item-expdate {
+    margin-right: 15px;
+    font-size: 14px;
+}
+
+.item-expdate.expired {
+    color: red;
+}
+
+.delete-btn {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 10px;
+    border-radius: 3px;
+}
+
+.delete-btn:hover {
+    background-color: #ff1a1a;
 }
