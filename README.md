@@ -102,8 +102,16 @@ Credits to the following:
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
 
 
-## ✏️ Contributing and Considerable Additional Features
+## ✏️ Contributors and Considerable Additional Features
 
+### Contributors:
+
+1. [Annie Dudley](https://github.com/Anniebooth00)
+2. [Shu Yang](https://github.com/UBC-Yang)
+3. [Jan Ian Daluz](https://github.com/janiandaluz)
+4. [Trisha Kaye Masbate](https://github.com/trishamasbate)
+
+### Things to Consider:
     - 👀 Barcode scanning functionality for easy item entry.
     - 👀 Pop-up notifications for items nearing expiration or are expired.
     - 👀 Integration with grocery delivery services for seamless replenishment.
