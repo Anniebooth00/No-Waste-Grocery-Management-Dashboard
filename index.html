@@ -12,13 +12,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <!-- Importing custom CSS styles -->
     <link rel="stylesheet" href="./assets/css/api.css">
+    <link rel="stylesheet" href="./assets/css/api2.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <!-- Setting the title of the page -->
     <title>NoWaste</title>
 </head>
 <body>
     <!-- Main container for the app -->
-    <div class="container">
+    <div class="container-1">
         <!-- Header section containing the navigation bar -->
         <header class="group uk-navbar-container">
             <!-- Navigation bar with UIKit navbar class -->
@@ -36,12 +37,19 @@
         </header>
         <!-- Main content section -->
         <main>
+            <div class="container">
+                <h1>My Daily Bread</h1>
+                <div id="advice" class="advice-box">
+                    Click for some insights!
+                </div>
+                <button id="adviceButton">Get Advice</button>
+            </div>
             <div class="uk-grid-divider uk-child-width-1-2@m" uk-grid>
                 <div>
                     <div class="items-list">
                         <div class="text-wrapper-2">Inventory</div>
                         <img src="./assets/img/grocery.gif" alt="Sample Image" class="sample-image" id="sampleImage">
-                        <button class="add-item-button uk-button uk-button-primary" id="openModalBtn">Add Groceries</button>
+                        <button class="add-item-button" id="openModalBtn">Add Groceries</button>
                         <div class="items-container" id="itemsContainer">
                             <div class="category" id="beveragesCategory">
                                 
@@ -111,7 +119,7 @@
                                 <div class="input-group">
                                     <div class="col-4 dropdown" style="margin-top: 0;">
                                         <button class="btn btn-secondary dropdown-toggle" type="button" id="iconDropdown" aria-expanded="false">
-                                            Select Icon
+                                            Category
                                         </button>
                                         <ul class="dropdown-menu" aria-labelledby="iconDropdown">
                                             <li><a class="dropdown-item" href="#"><i class="fas fa-apple-alt"></i></a>Fruit</li>
@@ -143,6 +151,8 @@
                 </div>
             </div>
         </div>
+            
+    </div>
     </div>
     <!-- Importing UIKit JS framework -->
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.22/dist/js/uikit.min.js"></script>
@@ -150,6 +160,7 @@
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.22/dist/js/uikit-icons.min.js"></script>
 
     <script src="./assets/js/api.js"></script>
+    <script src="./assets/js/api2.js"></script>
     <script src="./assets/js/script.js"></script>
 </body>
 </html>

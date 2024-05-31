@@ -1,6 +1,14 @@
 /* Base styles for mobile devices */
+
+.uk-logo {
+    font-size: 32px;
+    font-family: 'Poppins', sans-serif;
+    color: var(--white);
+    text-decoration: none;
+}
+
 .container {
-    background-color: #ffffff;
+    background-color: var(--white);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -17,7 +25,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #f8f8f8; /* Background color for the navbar */
+    
+}
+
+.uk-navbar-container:not(.uk-navbar-transparent) {
+    background: var(--dark-olive);
 }
 
 .overlap-group {
@@ -33,14 +45,15 @@
 }
 
 main {
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
 }
 
 .text-wrapper-2 {
-    font-family: "Neue Montreal-Regular", Helvetica;
-    font-weight: 400;
-    color: #000000;
-    font-size: 24px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: var(--black);
+    font-size: 28px;
     text-align: center;
     margin-top: 20px;
 }
@@ -53,7 +66,7 @@ main {
     flex-direction: column; /* Ensures children stack vertically */
     align-items: center;
     gap: 20px;
-    border: 1px solid #e0e0e0; /* Light border */
+    border: 1px solid var(--dark-olive); /* Light border */
     border-radius: 10px; /* Rounded corners */
     padding: 20px; /* Padding inside the div */
 }
@@ -69,7 +82,7 @@ main {
 /*Modal display*/
 /* Modal styles */
 .modal {
-    font-family: "Neue Montreal-Regular", Helvetica;
+    font-family: 'Poppins', sans-serif;
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -88,7 +101,7 @@ main {
     padding: 20px;
     width: 80%; /* Could be more or less, depending on screen size */
     max-width: 500px;
-    background-color: #fff;
+    background-color: var(--white);
     border-radius: 8px;
 }
 
@@ -96,7 +109,7 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #dee2e6;
+    border-bottom: 1px solid var(--light-grey);
     padding-bottom: 0.5rem;
 }
 
@@ -137,7 +150,7 @@ main {
 .form-control {
     width: 100%;
     padding: 0.5rem;
-    border: 1px solid #ccc;
+    border: 1px solid var(--light-grey);
     border-radius: 4px;
     box-sizing: border-box;
 }
@@ -145,7 +158,7 @@ main {
 .input-group .btn {
     cursor: pointer;
     padding: 0.5rem 1rem;
-    border: 1px solid #ccc;
+    border: 1px solid var(--light-grey);
     background-color: var(--dark-olive);
     color: white;
     border-radius: 4px;
@@ -153,7 +166,7 @@ main {
 }
 
 .input-group .btn:hover {
-    background-color: darkolivegreen;
+    background-color: var(--light-olive);
 }
 
 .button-container {
@@ -166,7 +179,7 @@ main {
     display: none;
     padding: 2%;
     position: absolute;
-    background-color: #fff;
+    background-color: var(--white);
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
     z-index: 1;
 }
@@ -181,7 +194,7 @@ main {
 }
 
 .dropdown-item:hover {
-    background-color: #f1f1f1;
+    background-color: var(--light-grey);
 }
 
 
@@ -194,29 +207,29 @@ main {
 .btn {
     cursor: pointer;
     padding: 0.5rem 1rem;
-    border: 1px solid #ccc;
+    border: 1px solid var(--light-grey);
     border-radius: 23px;
     background-color: var(--dark-olive);
     color: white;
 }
 
 .btn:hover {
-    background-color: darkolivegreen;
+    background-color: var(--light-olive);
+    color: var(--primary-base);
 }
 
 
 /* Button inside the items list div */
 .add-item-button {
     margin-top: 20px;
-    background-color: var(--light-olive);
-    color: var(--black);
-    font-family: var(--interactive-elements-buttons-font-family);
+    background-color: var(--dark-olive);
+    color: var(--white);
 }
 
 .add-item-button:hover {
     margin-top: 20px;
-    background-color: var(--dark-olive);
-    color:var(--white);
+    background-color: var(--light-olive);
+    color:var(--primary-base);
 }
 
 /* Styles for larger screens (desktops and tablets) */
@@ -253,9 +266,9 @@ main {
     align-items: center;
     margin-right: 15px;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--light-grey);
     border-radius: 5px;
-    background-color: #f9f9f9;
+    background-color: var(--light-grey);
     margin-bottom: 10px;
 }
 
@@ -275,12 +288,12 @@ main {
 }
 
 .item-expdate.expired {
-    color: red;
+    color: var(--primary-error);
 }
 
 .delete-btn {
-    background-color: #ff4d4d;
-    color: white;
+    background-color: var(--primary-error);
+    color: var(--white);
     border: none;
     padding: 5px 10px;
     cursor: pointer;
@@ -289,5 +302,6 @@ main {
 }
 
 .delete-btn:hover {
-    background-color: #ff1a1a;
+    background-color: var(--primary-error-hover);
+    color: var(--white);
 }
